@@ -1,0 +1,13 @@
+C:\Users\Joe\source\repos\suswin\suswin\bin\Debug\netcoreapp3.1\suswin.exe
+C:\Users\Joe\source\repos\suswin\suswin\bin\Debug\netcoreapp3.1\suswin.deps.json
+C:\Users\Joe\source\repos\suswin\suswin\bin\Debug\netcoreapp3.1\suswin.runtimeconfig.json
+C:\Users\Joe\source\repos\suswin\suswin\bin\Debug\netcoreapp3.1\suswin.runtimeconfig.dev.json
+C:\Users\Joe\source\repos\suswin\suswin\bin\Debug\netcoreapp3.1\suswin.dll
+C:\Users\Joe\source\repos\suswin\suswin\bin\Debug\netcoreapp3.1\suswin.pdb
+C:\Users\Joe\source\repos\suswin\suswin\obj\Debug\netcoreapp3.1\suswin.vbprojAssemblyReference.cache
+C:\Users\Joe\source\repos\suswin\suswin\obj\Debug\netcoreapp3.1\suswin.AssemblyInfoInputs.cache
+C:\Users\Joe\source\repos\suswin\suswin\obj\Debug\netcoreapp3.1\suswin.AssemblyInfo.vb
+C:\Users\Joe\source\repos\suswin\suswin\obj\Debug\netcoreapp3.1\suswin.vbproj.CoreCompileInputs.cache
+C:\Users\Joe\source\repos\suswin\suswin\obj\Debug\netcoreapp3.1\suswin.dll
+C:\Users\Joe\source\repos\suswin\suswin\obj\Debug\netcoreapp3.1\suswin.pdb
+C:\Users\Joe\source\repos\suswin\suswin\obj\Debug\netcoreapp3.1\suswin.genruntimeconfig.cache

@@ -9,6 +9,11 @@
 		<MyType>WindowsForms</MyType>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DebugSymbols>false</DebugSymbols>
+	  <DebugType>none</DebugType>
+	</PropertyGroup>
+
 
 	<ItemGroup>
 		<Import Include="System.Data" />

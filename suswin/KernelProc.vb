@@ -30,7 +30,4 @@ Module KernelProc
     Public Function CloseHandle(handle As IntPtr) As Boolean
 
     End Function
-    <DllImport("kernel32.dll", EntryPoint:="GetModuleHandle", CharSet:=CharSet.Auto, SetLastError:=True)>
-    Public Function GetModuleHandle(ByVal lpModuleName As String) As IntPtr
-    End Function
 End Module

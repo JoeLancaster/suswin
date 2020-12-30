@@ -1,6 +1,8 @@
 ﻿Class Proc
     Private _running As Boolean
     Public ReadOnly pid As Integer
+    Private hThreads As List(Of IntPtr)
+
     Public Property Running() As Boolean
         Get
             Return _running
@@ -25,26 +27,26 @@
         Return pid.GetHashCode()
     End Function
     Sub Suspend()
+        hThreads = New List(Of IntPtr)
         For Each pThread As ProcessThread In proc.Threads
-            Dim hThread As IntPtr = KernelProc.OpenThread(ThreadAccess.SUSPEND_RESUME, False, CType(pThread.Id, UInteger))
+            Dim hThread As IntPtr = KernelProc.OpenThread(KernelProc.ThreadAccess.SUSPEND_RESUME, False, CType(pThread.Id, UInteger))
             If hThread = IntPtr.Zero Then
                 Continue For
             End If
-            Console.WriteLine(pThread.Id)
-            Console.WriteLine(KernelProc.SuspendThread(hThread))
-            'Console.WriteLine(kProc.CloseHandle(hThread))
+            hThreads.Add(hThread)
+            KernelProc.SuspendThread(hThread)
         Next
-        running = False
+        Running = False
     End Sub
     Sub PResume()
-        For Each pThread As ProcessThread In proc.Threads
-            Dim hThread As IntPtr = KernelProc.OpenThread(ThreadAccess.SUSPEND_RESUME, False, CType(pThread.Id, UInteger))
+        For Each hThread In hThreads
             If hThread = IntPtr.Zero Then
                 Continue For
             End If
-            Debug.WriteLine(KernelProc.ResumeThread(hThread))
+            KernelProc.ResumeThread(hThread)
+            KernelProc.CloseHandle(hThread)
         Next
-        running = True
+        Running = True
     End Sub
 
 End Class
